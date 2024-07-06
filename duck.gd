@@ -5,15 +5,20 @@ extends RigidBody2D
 @export var acceleration_speed := 1500.0
 @export var break_speed := 1800.0
 
+@export var sprite_texture : Texture2D
 @export var player_number = 1
-
-var roatate_left_action = "turn_left" + str(player_number)
-var roatate_right_action = "turn_right" + str(player_number)
-var accelerate_action = "accelerate" + str(player_number)
-var break_action = "break" + str(player_number)
 
 var move_direction := Vector2.ZERO
 var rotation_velocity := 0.0
+
+@onready var roatate_left_action = "turn_left" + str(player_number)
+@onready var roatate_right_action = "turn_right" + str(player_number)
+@onready var accelerate_action = "accelerate" + str(player_number)
+@onready var break_action = "break" + str(player_number)
+
+
+func _ready() -> void:
+	%Sprite.texture = sprite_texture
 
 
 func _input(event: InputEvent) -> void:
