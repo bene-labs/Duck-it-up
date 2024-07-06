@@ -27,7 +27,7 @@ position = Vector2(348, 278)
 rotation = -1.59296
 
 [node name="Obstacle8" parent="Obsctales" instance=ExtResource("6_pn5g6")]
-position = Vector2(48.3089, 573.211)
+position = Vector2(14.4498, 566.459)
 rotation = 1.59296
 scale = Vector2(0.55, 0.55)
 
@@ -106,6 +106,7 @@ shape = SubResource("RectangleShape2D_pmxkn")
 [node name="GameUI" parent="." groups=["ui"] instance=ExtResource("11_gqte7")]
 
 [node name="BreadSpawner" parent="." node_paths=PackedStringArray("obstacles", "ducks") instance=ExtResource("1_1g3fd")]
+visible = false
 offset_left = 69.0
 offset_top = 18.0
 offset_right = 1494.0
