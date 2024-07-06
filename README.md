@@ -11,3 +11,7 @@ Simple physics-based interactions for bumps.
 
 ### Objective:
 Eat more bread than the opponent within a 3-minute time limit.
+
+### Controls:
+Tank controls -> One button to turn left, one to turn right and then a break and accelerate button.
+Controls are slippery by design making it hard to turn in time to increase the challenge of collectiong bread.
