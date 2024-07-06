@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgpqiidv31aw"]
+
+[ext_resource type="Script" path="res://obstacle/obstacle.gd" id="1_fnikb"]
+
+[node name="Obstacle" type="StaticBody2D"]
+script = ExtResource("1_fnikb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-82, -90, 73, -97, 127, -88, 151, -57, 213, -21, 236, 43, 222, 70, -100, 81, -138, 76, -168, 59, -167, 31, -151, 19, -144, -6, -145, -38, -127, -61)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.560955, 0.560955, 0.560955, 1)
+antialiased = true
+polygon = PackedVector2Array(-82, -90, 73, -97, 127, -88, 151, -57, 213, -21, 236, 43, 222, 70, -100, 81, -138, 76, -168, 59, -167, 31, -151, 19, -144, -6, -145, -38, -127, -61)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvlj00jpi3qah"]
+
+[ext_resource type="Script" path="res://obstacle/obstacle.gd" id="1_dot0o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i4fer"]
+bounce = 0.7
+
+[node name="Obstacle" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_i4fer")
+script = ExtResource("1_dot0o")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-191, -206, 410, -201, 414, 314, 298, 309, 264, 268, 260, 198, 257, 174, 257, 145, 206, 125, 170, 123, 112, 132, 83, 145, 58, 133, 11, 121, -6, 92, 7, 58, 52, -46, 49, -80, 14, -114, -50, -126, -126, -138, -187, -141, -212, -157, -222, -199)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.560784, 0.560784, 0.560784, 1)
+polygon = PackedVector2Array(-191, -206, 410, -201, 414, 314, 298, 309, 264, 268, 260, 198, 257, 174, 257, 145, 206, 125, 170, 123, 112, 132, 83, 145, 58, 133, 11, 121, -6, 92, 7, 58, 52, -46, 49, -80, 14, -114, -50, -126, -126, -138, -187, -141, -212, -157, -222, -199)

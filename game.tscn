@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn5pyu1rt1v5m"]
+[gd_scene load_steps=13 format=3 uid="uid://dn5pyu1rt1v5m"]
 
 [ext_resource type="PackedScene" uid="uid://cqh8xvrbou82t" path="res://duck.tscn" id="1_7woym"]
 [ext_resource type="Texture2D" uid="uid://nskxott5x041" path="res://Assets/Sprites/duck2.svg" id="2_yd6gp"]
+[ext_resource type="PackedScene" uid="uid://bej4y0py05i48" path="res://obstacle/small_rock.tscn" id="3_c80tt"]
+[ext_resource type="PackedScene" uid="uid://chgpqiidv31aw" path="res://obstacle/big_rock.tscn" id="4_e3mc3"]
+[ext_resource type="PackedScene" uid="uid://cm6dih0w4wf6u" path="res://obstacle/middle_rock.tscn" id="5_sm3hc"]
+[ext_resource type="PackedScene" uid="uid://bqsg323rwcc20" path="res://obstacle/strange_rock.tscn" id="6_pn5g6"]
+[ext_resource type="PackedScene" uid="uid://dlm6bul1ooets" path="res://obstacle/corner_rock.tscn" id="7_b72lx"]
+[ext_resource type="PackedScene" uid="uid://bx0tq5tt2vhxg" path="res://obstacle/left_rock.tscn" id="8_iovpl"]
+[ext_resource type="PackedScene" uid="uid://be65q6u16rjqa" path="res://obstacle/bottom_rock.tscn" id="9_g8pov"]
+[ext_resource type="PackedScene" uid="uid://dvlj00jpi3qah" path="res://obstacle/top_rock.tscn" id="10_qdhc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmxkn"]
 size = Vector2(89.762, 898)
@@ -48,3 +56,31 @@ position = Vector2(1695, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 position = Vector2(-49, 450)
 shape = SubResource("RectangleShape2D_pmxkn")
+
+[node name="Obstacle2" parent="." instance=ExtResource("4_e3mc3")]
+position = Vector2(586, 854)
+scale = Vector2(0.7, 0.7)
+
+[node name="Obstacle" parent="." instance=ExtResource("3_c80tt")]
+position = Vector2(376, 433)
+scale = Vector2(0.5, 0.5)
+
+[node name="Obstacle3" parent="." instance=ExtResource("5_sm3hc")]
+position = Vector2(1115, 693)
+scale = Vector2(0.55, 0.55)
+
+[node name="Obstacle" parent="Obstacle3" instance=ExtResource("6_pn5g6")]
+position = Vector2(-354.546, -865.455)
+
+[node name="Obstacle4" parent="." instance=ExtResource("7_b72lx")]
+position = Vector2(1515, 833)
+
+[node name="Obstacle5" parent="." instance=ExtResource("8_iovpl")]
+position = Vector2(104, 95)
+
+[node name="Obstacle6" parent="." instance=ExtResource("9_g8pov")]
+position = Vector2(84, 842)
+
+[node name="Obstacle7" parent="." instance=ExtResource("10_qdhc3")]
+position = Vector2(1365, 136)
+scale = Vector2(0.7, 0.7)

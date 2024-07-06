@@ -15,8 +15,8 @@ gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_fwdbc")
 roation_speed = 100000.0
-acceleration_speed = 2000.0
-break_speed = 2000.0
+acceleration_speed = 4000.0
+break_speed = 4000.0
 sprite_texture = ExtResource("2_i7nm7")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -32,4 +32,4 @@ polygon = PackedVector2Array(100.999, -0.445031, 96.0255, 5.57694, 83.0477, 10.6
 [node name="AntiSpawnArea" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AntiSpawnArea"]
-polygon = PackedVector2Array(-62, 25, -76, 65, -91, 112, -54, 126, 7, 155, 48, 145, 77, 104, 97, 52, 61, 7, 57, -53, 91, -105, 90, -126, 48, -167, -32, -178, -97, -134, -113, -80, -59, -41, -60, -30, -57, 13)
+polygon = PackedVector2Array(-94, 27, -133, 60, -134, 155, -70, 197, 1, 219, 68, 202, 126, 162, 125, 58, 103, 29, 100, 10, 106, -53, 133, -116, 130, -184, 72, -222, 0, -239, -64, -223, -119, -188, -132, -113, -93, -51, -93, -33, -91, 8)
