@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://h8f7cpxtrxmt"]
+[gd_scene load_steps=7 format=3 uid="uid://h8f7cpxtrxmt"]
 
 [ext_resource type="Script" path="res://bread_spawner.gd" id="1_4xpp7"]
 [ext_resource type="Script" path="res://bread_data.gd" id="2_2arnx"]
 [ext_resource type="Resource" uid="uid://db5svliny6ycl" path="res://data/bread1.tres" id="3_2rsjk"]
 [ext_resource type="PackedScene" uid="uid://yre3ma06y7e0" path="res://base_bread.tscn" id="3_7b8ib"]
+[ext_resource type="Resource" uid="uid://730dpmewsdrm" path="res://data/bread2.tres" id="4_ed50h"]
+[ext_resource type="Resource" uid="uid://cunofr4spho32" path="res://data/bread3.tres" id="5_hjc68"]
 
 [node name="BreadSpawner" type="ReferenceRect"]
 offset_left = 63.0
@@ -11,7 +13,7 @@ offset_top = 51.0
 offset_right = 1538.0
 offset_bottom = 840.0
 script = ExtResource("1_4xpp7")
-bread_selection = Array[ExtResource("2_2arnx")]([ExtResource("3_2rsjk")])
+bread_selection = Array[ExtResource("2_2arnx")]([ExtResource("3_2rsjk"), ExtResource("4_ed50h"), ExtResource("5_hjc68")])
 bread_scene = ExtResource("3_7b8ib")
 
 [node name="Timer" type="Timer" parent="."]

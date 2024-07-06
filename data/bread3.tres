@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BreadData" load_steps=3 format=3 uid="uid://cunofr4spho32"]
+
+[ext_resource type="Script" path="res://bread_data.gd" id="1_0hiog"]
+[ext_resource type="Texture2D" uid="uid://ctxvc1v2yp3it" path="res://Assets/Sprites/Bread3.png" id="2_6ld2i"]
+
+[resource]
+script = ExtResource("1_0hiog")
+value = 1
+spawn_chance = 1
+texture = ExtResource("2_6ld2i")
+polygon = PackedVector2Array(86, -142, -45, -107, -132, -61, -158, 6, -159, 70, -90, 149, -26, 135, 29, 100, 82, 53, 111, 35, 141, -25, 164, -64, 120, -120)
+scale = Vector2(0.3, 0.3)

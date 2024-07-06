@@ -42,8 +42,8 @@ text = "Time: 0:00.00"
 
 [node name="ResultScreen1" type="TextureRect" parent="."]
 visible = false
-offset_right = 1587.0
-offset_bottom = 888.0
+offset_right = 1640.0
+offset_bottom = 900.0
 texture = ExtResource("2_ojmkk")
 
 [node name="RestartButton" type="Button" parent="ResultScreen1"]
@@ -56,7 +56,7 @@ text = "Restart"
 
 [node name="ResultScreen2" type="TextureRect" parent="."]
 visible = false
-offset_right = 1590.0
+offset_right = 1642.0
 offset_bottom = 900.0
 texture = ExtResource("3_a41a6")
 

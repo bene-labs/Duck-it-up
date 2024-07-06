@@ -55,9 +55,11 @@ func spawn_bread():
 			break
 	add_child(new_bread)
 
+
 func restart_timer():
 	$Timer.wait_time = rng.randf_range(min_spawn_delay, max_spawn_delay)
 	$Timer.start()
+
 
 func _on_timer_timeout() -> void:
 	spawn_bread()
