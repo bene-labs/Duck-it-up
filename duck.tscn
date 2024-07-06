@@ -4,13 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://b86eq8m7oig6d" path="res://Assets/Sprites/duck1.svg" id="2_i7nm7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kd0tq"]
-bounce = 0.8
+rough = true
+bounce = 0.9
 
 [node name="Duck" type="RigidBody2D"]
+mass = 0.7
 physics_material_override = SubResource("PhysicsMaterial_kd0tq")
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_fwdbc")
+roation_speed = 100000.0
+acceleration_speed = 2000.0
+break_speed = 2000.0
 sprite_texture = ExtResource("2_i7nm7")
 
 [node name="Sprite" type="Sprite2D" parent="."]
