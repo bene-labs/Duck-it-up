@@ -35,3 +35,13 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 32
 text = "Time: 0:00.00"
+
+[node name="ResultScreen1" type="TextureRect" parent="."]
+visible = false
+offset_right = 1587.0
+offset_bottom = 888.0
+
+[node name="ResultScreen2" type="TextureRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0

@@ -103,7 +103,7 @@ position = Vector2(1695, 1)
 position = Vector2(-49, 450)
 shape = SubResource("RectangleShape2D_pmxkn")
 
-[node name="GameUI" parent="." instance=ExtResource("11_gqte7")]
+[node name="GameUI" parent="." groups=["ui"] instance=ExtResource("11_gqte7")]
 
 [node name="BreadSpawner" parent="." node_paths=PackedStringArray("obstacles", "ducks") instance=ExtResource("1_1g3fd")]
 offset_left = 69.0
@@ -119,3 +119,5 @@ autoplay = true
 
 [connection signal="points_changed" from="Ducks/Duck" to="GameUI" method="_on_duck_points_changed"]
 [connection signal="points_changed" from="Ducks/Duck2" to="GameUI" method="_on_duck_2_points_changed"]
+[connection signal="time_over" from="GameUI" to="Ducks/Duck" method="_on_game_ui_time_over"]
+[connection signal="time_over" from="GameUI" to="Ducks/Duck2" method="_on_game_ui_time_over"]

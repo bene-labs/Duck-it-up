@@ -84,3 +84,10 @@ func _on_hit_sound_area_body_entered(body: Node2D) -> void:
 		return
 	$HitSound.pitch_scale = rng.randf_range(min_hit_pitch, max_hit_pitch)
 	$HitSound.play()
+
+
+func _on_game_ui_time_over(winnner: Variant) -> void:
+	if winnner == player_number:
+		%Sprite.hide()
+	else:
+		queue_free()
