@@ -1,121 +1,14 @@
-[gd_scene load_steps=32 format=3 uid="uid://cqh8xvrbou82t"]
+[gd_scene load_steps=7 format=3 uid="uid://cqh8xvrbou82t"]
 
 [ext_resource type="Script" path="res://duck.gd" id="1_fwdbc"]
 [ext_resource type="Texture2D" uid="uid://b86eq8m7oig6d" path="res://Assets/Sprites/duck1.svg" id="2_i7nm7"]
+[ext_resource type="PackedScene" uid="uid://d2pew0ofx0o8d" path="res://explosion.tscn" id="2_vxtr2"]
 [ext_resource type="AudioStream" uid="uid://d3d36gpsjcn5g" path="res://Assets/Sound/ducks_hit_eachother.wav" id="3_m2tob"]
-[ext_resource type="Texture2D" uid="uid://b8tbt3tmpn1fj" path="res://Assets/Sprites/Explosion4/0001.png" id="4_kcm2n"]
 [ext_resource type="AudioStream" uid="uid://dk0s30d2qudon" path="res://Assets/Sound/quack1.wav" id="4_suhds"]
-[ext_resource type="Texture2D" uid="uid://d2j277gn5eowt" path="res://Assets/Sprites/Explosion4/0002.png" id="5_c8aki"]
-[ext_resource type="Texture2D" uid="uid://b08xk5chnj03i" path="res://Assets/Sprites/Explosion4/0003.png" id="6_op6yl"]
-[ext_resource type="Texture2D" uid="uid://beerw8iyyuq2j" path="res://Assets/Sprites/Explosion4/0004.png" id="7_7g5q8"]
-[ext_resource type="Texture2D" uid="uid://c7uouy66k5v6u" path="res://Assets/Sprites/Explosion4/0005.png" id="8_slfew"]
-[ext_resource type="Texture2D" uid="uid://d2uc8s4itaxeg" path="res://Assets/Sprites/Explosion4/0006.png" id="9_aeepn"]
-[ext_resource type="Texture2D" uid="uid://hk6alqfhkibu" path="res://Assets/Sprites/Explosion4/0007.png" id="10_flsms"]
-[ext_resource type="Texture2D" uid="uid://2rjd3pojmk52" path="res://Assets/Sprites/Explosion4/0008.png" id="11_yo6r4"]
-[ext_resource type="Texture2D" uid="uid://cv1n0witk4476" path="res://Assets/Sprites/Explosion4/0009.png" id="12_50fxb"]
-[ext_resource type="Texture2D" uid="uid://xkipfj4bqddy" path="res://Assets/Sprites/Explosion4/0010.png" id="13_iiuan"]
-[ext_resource type="Texture2D" uid="uid://bh34e7a5fy8bm" path="res://Assets/Sprites/Explosion4/0011.png" id="14_bvf63"]
-[ext_resource type="Texture2D" uid="uid://1xd6vtn2m4pq" path="res://Assets/Sprites/Explosion4/0012.png" id="15_4urb6"]
-[ext_resource type="Texture2D" uid="uid://ctvpl10dgg1cf" path="res://Assets/Sprites/Explosion4/0013.png" id="16_t774r"]
-[ext_resource type="Texture2D" uid="uid://cpf0hplhn3v2p" path="res://Assets/Sprites/Explosion4/0014.png" id="17_nwfg3"]
-[ext_resource type="Texture2D" uid="uid://dojkgecmauijy" path="res://Assets/Sprites/Explosion4/0015.png" id="18_2c0cl"]
-[ext_resource type="Texture2D" uid="uid://cx204goejyanv" path="res://Assets/Sprites/Explosion4/0016.png" id="19_x73nd"]
-[ext_resource type="Texture2D" uid="uid://d10wg4b27yh1w" path="res://Assets/Sprites/Explosion4/0017.png" id="20_lalnn"]
-[ext_resource type="Texture2D" uid="uid://b41ik76uxoa48" path="res://Assets/Sprites/Explosion4/0018.png" id="21_j4doc"]
-[ext_resource type="Texture2D" uid="uid://dmh7veewi5fwt" path="res://Assets/Sprites/Explosion4/0019.png" id="22_kflgg"]
-[ext_resource type="Texture2D" uid="uid://cikx642rv54di" path="res://Assets/Sprites/Explosion4/0020.png" id="23_0lxui"]
-[ext_resource type="Texture2D" uid="uid://c4qbopdxtjscj" path="res://Assets/Sprites/Explosion4/0021.png" id="24_mh01j"]
-[ext_resource type="Texture2D" uid="uid://dqdldqingqt18" path="res://Assets/Sprites/Explosion4/0022.png" id="25_udy4r"]
-[ext_resource type="Texture2D" uid="uid://nyxpod1ds8vd" path="res://Assets/Sprites/Explosion4/0023.png" id="26_elahv"]
-[ext_resource type="Texture2D" uid="uid://u5xmsv0fxdsh" path="res://Assets/Sprites/Explosion4/0024.png" id="27_sjfch"]
-[ext_resource type="Texture2D" uid="uid://bxwxkm4l8k47n" path="res://Assets/Sprites/Explosion4/0025.png" id="28_ekjan"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kd0tq"]
 rough = true
 bounce = 0.9
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_reojx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_kcm2n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_c8aki")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_op6yl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_7g5q8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_slfew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_aeepn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_flsms")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_yo6r4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_50fxb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_iiuan")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_bvf63")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_4urb6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_t774r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_nwfg3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_2c0cl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_x73nd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_lalnn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_j4doc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_kflgg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_0lxui")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_mh01j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_udy4r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_elahv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_sjfch")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_ekjan")
-}],
-"loop": true,
-"name": &"default",
-"speed": 30.0
-}]
 
 [node name="Duck" type="RigidBody2D"]
 collision_layer = 3
@@ -124,9 +17,10 @@ physics_material_override = SubResource("PhysicsMaterial_kd0tq")
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_fwdbc")
-roation_speed = 400000.0
-acceleration_speed = 40000.0
-break_speed = 40000.0
+explosion = ExtResource("2_vxtr2")
+roation_speed = 80000.0
+acceleration_speed = 20000.0
+break_speed = 14000.0
 sprite_texture = ExtResource("2_i7nm7")
 quack_sound = ExtResource("4_suhds")
 
@@ -136,27 +30,22 @@ position = Vector2(2, 0)
 rotation = 1.5708
 texture = ExtResource("2_i7nm7")
 
-[node name="Explosion" type="AnimatedSprite2D" parent="."]
-visible = false
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_reojx")
-frame_progress = 0.20486
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 1.5752
 polygon = PackedVector2Array(100.999, -0.445031, 96.0255, 5.57694, 83.0477, 10.6342, 77.0477, 10.6606, 69.1051, 23.6957, 59.1228, 27.7398, 46.1361, 30.797, 29.1716, 38.8718, 28.198, 44.8762, 23.2245, 50.8982, 2.25554, 57.9906, -18.7398, 59.0831, -35.7529, 56.1581, -56.7968, 46.2507, -64.8363, 37.286, -66.8495, 34.2949, -62.8672, 30.2773, -77.9243, 17.3435, -83.9683, 7.37006, -84.986, 3.3745, -78.9948, 1.34808, -86.0212, -4.62101, -83.0609, -13.6341, -73.105, -23.6781, -65.136, -30.7133, -67.158, -35.7044, -62.1977, -44.7264, -48.2287, -51.788, -30.2597, -58.8672, -12.2687, -60.9465, 7.73995, -59.0347, 20.7663, -53.092, 27.7926, -47.1229, 26.8147, -42.1186, 40.8542, -33.1803, 47.8673, -30.2112, 62.8848, -26.2773, 70.9068, -21.3126, 77.9508, -11.3436, 88.9639, -8.39208, 96.9814, -4.42737)
 
 [node name="AntiSpawnArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AntiSpawnArea"]
-visible = false
-polygon = PackedVector2Array(-94, 27, -133, 60, -134, 155, -70, 197, 1, 219, 68, 202, 126, 162, 125, 58, 103, 29, 100, 10, 106, -53, 133, -116, 130, -184, 72, -222, 0, -239, -64, -223, -119, -188, -132, -113, -93, -51, -93, -33, -91, 8)
+polygon = PackedVector2Array(-109, 26, -133, 60, -134, 155, -70, 197, 1, 219, 68, 202, 126, 162, 153, 70, 122, 27, 124, 5, 128, -54, 133, -116, 138, -185, 72, -222, 0, -239, -64, -223, -132, -193, -132, -113, -123, -63, -120, -32, -113, 2)
 
 [node name="QuackSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_suhds")
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m2tob")
+
+[node name="EatSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_m2tob")
 
 [node name="HitSoundArea" type="Area2D" parent="."]
@@ -165,3 +54,5 @@ scale = Vector2(1.05, 1.05)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitSoundArea"]
 rotation = 1.5752
 polygon = PackedVector2Array(100.999, -0.445031, 96.0255, 5.57694, 83.0477, 10.6342, 77.0477, 10.6606, 69.1051, 23.6957, 59.1228, 27.7398, 46.1361, 30.797, 29.1716, 38.8718, 28.198, 44.8762, 23.2245, 50.8982, 2.25554, 57.9906, -18.7398, 59.0831, -35.7529, 56.1581, -56.7968, 46.2507, -64.8363, 37.286, -66.8495, 34.2949, -62.8672, 30.2773, -77.9243, 17.3435, -83.9683, 7.37006, -84.986, 3.3745, -78.9948, 1.34808, -86.0212, -4.62101, -83.0609, -13.6341, -73.105, -23.6781, -65.136, -30.7133, -67.158, -35.7044, -62.1977, -44.7264, -48.2287, -51.788, -30.2597, -58.8672, -12.2687, -60.9465, 7.73995, -59.0347, 20.7663, -53.092, 27.7926, -47.1229, 26.8147, -42.1186, 40.8542, -33.1803, 47.8673, -30.2112, 62.8848, -26.2773, 70.9068, -21.3126, 77.9508, -11.3436, 88.9639, -8.39208, 96.9814, -4.42737)
+
+[connection signal="body_entered" from="HitSoundArea" to="." method="_on_hit_sound_area_body_entered"]

@@ -8,8 +8,6 @@ extends ReferenceRect
 
 @export var min_spawn_delay := 0.5
 @export var max_spawn_delay = 10.0
-@export var min_duck_distance := 1000
-@export var min_obstacle_distance = 500
 
 @onready var rng = RandomNumberGenerator.new()
 
@@ -35,26 +33,26 @@ func pick_random_bread() -> BreadData:
 
 func spawn_bread():
 	var bread_data = pick_random_bread()
-	var is_valid_positon = false
 	var new_bread : Bread = bread_scene.instantiate()
-	var new_position
 	new_bread.load_from_data(bread_data)
-	while !is_valid_positon:
+	while true:
 		var rect = get_global_rect()
-		new_position = Vector2.ZERO
-		new_position.x = rng.randf_range(rect.position.x, rect.size.x)
-		new_position.y = rng.randf_range(rect.position.y,  rect.size.y)
-		
+		new_bread.global_position.x = rng.randf_range(rect.position.x, rect.size.x)
+		new_bread.global_position.y = rng.randf_range(rect.position.y,  rect.size.y)
+		var macthing_ducks = 0
 		for duck: Duck in ducks.get_children():
-			var dist = abs(new_bread.global_position.distance_to(duck.global_position))
-			if dist <= min_duck_distance:
-				continue
+			if duck.is_polygon_intersecting_no_spawn_area(new_bread.global_polygon):
+				break
+			macthing_ducks += 1
+		if macthing_ducks != ducks.get_child_count():
+			continue
+		var matching_obstacles = 0
 		for obstacle: Obstacle in obstacles.get_children():
-			var dist = abs(new_bread.global_position.distance_to(obstacle.global_position))
-			if dist <= min_obstacle_distance:
-				continue
-		is_valid_positon = true
-	new_bread.global_position = new_position
+			if obstacle.is_polygon_intersecting(new_bread.global_polygon):
+				break
+			matching_obstacles += 1
+		if matching_obstacles == obstacles.get_child_count():
+			break
 	add_child(new_bread)
 
 func restart_timer():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dn5pyu1rt1v5m"]
+[gd_scene load_steps=18 format=3 uid="uid://dn5pyu1rt1v5m"]
 
 [ext_resource type="PackedScene" uid="uid://h8f7cpxtrxmt" path="res://bread_spawner.tscn" id="1_1g3fd"]
 [ext_resource type="PackedScene" uid="uid://cqh8xvrbou82t" path="res://duck.tscn" id="1_7woym"]
@@ -9,9 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dlm6bul1ooets" path="res://obstacle/corner_rock.tscn" id="7_b72lx"]
 [ext_resource type="PackedScene" uid="uid://bx0tq5tt2vhxg" path="res://obstacle/left_rock.tscn" id="8_iovpl"]
 [ext_resource type="PackedScene" uid="uid://be65q6u16rjqa" path="res://obstacle/bottom_rock.tscn" id="9_g8pov"]
+[ext_resource type="AudioStream" uid="uid://m8j1htqsm30p" path="res://Assets/Sound/eat1.wav" id="10_hx4ht"]
 [ext_resource type="PackedScene" uid="uid://dvlj00jpi3qah" path="res://obstacle/top_rock.tscn" id="10_qdhc3"]
 [ext_resource type="Texture2D" uid="uid://nskxott5x041" path="res://Assets/Sprites/duck2.svg" id="10_ycxuw"]
 [ext_resource type="PackedScene" uid="uid://djpq06ws07gy2" path="res://game_ui.tscn" id="11_gqte7"]
+[ext_resource type="AudioStream" uid="uid://c4x1yu4r58hum" path="res://Assets/Sound/eat2.wav" id="12_k7kp4"]
 [ext_resource type="AudioStream" uid="uid://1yhj4kuu7e0j" path="res://Assets/Sound/duckfight_music.wav" id="13_es76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmxkn"]
@@ -68,11 +70,13 @@ scale = Vector2(0.7, 0.7)
 [node name="Duck" parent="Ducks" instance=ExtResource("1_7woym")]
 position = Vector2(190, 638)
 rotation = -1.5391
+eat_sound = ExtResource("10_hx4ht")
 
 [node name="Duck2" parent="Ducks" instance=ExtResource("1_7woym")]
 position = Vector2(1314, 361)
 rotation = 1.51522
 sprite_texture = ExtResource("10_ycxuw")
+eat_sound = ExtResource("12_k7kp4")
 player_number = 2
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
@@ -106,13 +110,13 @@ shape = SubResource("RectangleShape2D_pmxkn")
 [node name="GameUI" parent="." groups=["ui"] instance=ExtResource("11_gqte7")]
 
 [node name="BreadSpawner" parent="." node_paths=PackedStringArray("obstacles", "ducks") instance=ExtResource("1_1g3fd")]
-visible = false
 offset_left = 69.0
 offset_top = 18.0
 offset_right = 1494.0
 offset_bottom = 826.0
 obstacles = NodePath("../Obsctales")
 ducks = NodePath("../Ducks")
+max_spawn_delay = 5.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_es76g")

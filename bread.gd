@@ -4,12 +4,12 @@ extends Node2D
 @export var value = 1
 @export var spawn_chance = 1
 
-var poly : PackedVector2Array:
+var global_polygon:
 	get:
-		var pol_list = []
-		for pol in $Area2D/CollisionPolygon2D.polygon:
-			pol_list.append(pol + global_position)
-		return PackedVector2Array(pol_list)
+		var global_poly = PackedVector2Array($Area2D/CollisionPolygon2D.polygon)
+		for i in range(global_poly.size()):
+			global_poly[i] = to_global(global_poly[i])
+		return global_poly
 
 
 func load_from_data(data: BreadData):
