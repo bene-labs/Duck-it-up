@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dn5pyu1rt1v5m"]
+[gd_scene load_steps=16 format=3 uid="uid://dn5pyu1rt1v5m"]
 
 [ext_resource type="PackedScene" uid="uid://h8f7cpxtrxmt" path="res://bread_spawner.tscn" id="1_1g3fd"]
 [ext_resource type="PackedScene" uid="uid://cqh8xvrbou82t" path="res://duck.tscn" id="1_7woym"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dvlj00jpi3qah" path="res://obstacle/top_rock.tscn" id="10_qdhc3"]
 [ext_resource type="Texture2D" uid="uid://nskxott5x041" path="res://Assets/Sprites/duck2.svg" id="10_ycxuw"]
 [ext_resource type="PackedScene" uid="uid://djpq06ws07gy2" path="res://game_ui.tscn" id="11_gqte7"]
+[ext_resource type="AudioStream" uid="uid://1yhj4kuu7e0j" path="res://Assets/Sound/duckfight_music.wav" id="13_es76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmxkn"]
 size = Vector2(89.762, 898)
@@ -111,6 +112,10 @@ offset_right = 1494.0
 offset_bottom = 826.0
 obstacles = NodePath("../Obsctales")
 ducks = NodePath("../Ducks")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_es76g")
+autoplay = true
 
 [connection signal="points_changed" from="Ducks/Duck" to="GameUI" method="_on_duck_points_changed"]
 [connection signal="points_changed" from="Ducks/Duck2" to="GameUI" method="_on_duck_2_points_changed"]
