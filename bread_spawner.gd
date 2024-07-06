@@ -37,20 +37,24 @@ func spawn_bread():
 	var bread_data = pick_random_bread()
 	var is_valid_positon = false
 	var new_bread : Bread = bread_scene.instantiate()
+	var new_position
 	new_bread.load_from_data(bread_data)
-	#while !is_valid_positon:
-		#new_bread.global_position.x = rng.randf_range(get_rect().position.x,  get_rect().size.x)
-		#new_bread.global_position.y = rng.randf_range(get_rect().position.y,  get_rect().size.y)
-		#
-		#for duck: Duck in ducks.get_children():
-			#var dist = abs(new_bread.global_position.distance_to(duck.global_position))
-			#if dist <= min_duck_distance:
-				#continue
-		#for obstacle: Obstacle in obstacles.get_children():
-			#var dist = abs(new_bread.global_position.distance_to(obstacle.global_position))
-			#if dist <= min_obstacle_distance:
-				#continue
-		#is_valid_positon = true
+	while !is_valid_positon:
+		var rect = get_global_rect()
+		new_position = Vector2.ZERO
+		new_position.x = rng.randf_range(rect.position.x, rect.size.x)
+		new_position.y = rng.randf_range(rect.position.y,  rect.size.y)
+		
+		for duck: Duck in ducks.get_children():
+			var dist = abs(new_bread.global_position.distance_to(duck.global_position))
+			if dist <= min_duck_distance:
+				continue
+		for obstacle: Obstacle in obstacles.get_children():
+			var dist = abs(new_bread.global_position.distance_to(obstacle.global_position))
+			if dist <= min_obstacle_distance:
+				continue
+		is_valid_positon = true
+	new_bread.global_position = new_position
 	add_child(new_bread)
 
 func restart_timer():

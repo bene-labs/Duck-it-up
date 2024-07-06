@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqh8xvrbou82t"]
+[gd_scene load_steps=6 format=3 uid="uid://cqh8xvrbou82t"]
 
 [ext_resource type="Script" path="res://duck.gd" id="1_fwdbc"]
 [ext_resource type="Texture2D" uid="uid://b86eq8m7oig6d" path="res://Assets/Sprites/duck1.svg" id="2_i7nm7"]
+[ext_resource type="AudioStream" uid="uid://d3d36gpsjcn5g" path="res://Assets/Sound/ducks_hit_eachother.wav" id="3_m2tob"]
+[ext_resource type="AudioStream" uid="uid://dk0s30d2qudon" path="res://Assets/Sound/quack1.wav" id="4_suhds"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kd0tq"]
 rough = true
@@ -15,9 +17,10 @@ gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_fwdbc")
 roation_speed = 100000.0
-acceleration_speed = 4000.0
-break_speed = 4000.0
+acceleration_speed = 40000.0
+break_speed = 40000.0
 sprite_texture = ExtResource("2_i7nm7")
+quack_sound = ExtResource("4_suhds")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -30,6 +33,13 @@ rotation = 1.5752
 polygon = PackedVector2Array(100.999, -0.445031, 96.0255, 5.57694, 83.0477, 10.6342, 77.0477, 10.6606, 69.1051, 23.6957, 59.1228, 27.7398, 46.1361, 30.797, 29.1716, 38.8718, 28.198, 44.8762, 23.2245, 50.8982, 2.25554, 57.9906, -18.7398, 59.0831, -35.7529, 56.1581, -56.7968, 46.2507, -64.8363, 37.286, -66.8495, 34.2949, -62.8672, 30.2773, -77.9243, 17.3435, -83.9683, 7.37006, -84.986, 3.3745, -78.9948, 1.34808, -86.0212, -4.62101, -83.0609, -13.6341, -73.105, -23.6781, -65.136, -30.7133, -67.158, -35.7044, -62.1977, -44.7264, -48.2287, -51.788, -30.2597, -58.8672, -12.2687, -60.9465, 7.73995, -59.0347, 20.7663, -53.092, 27.7926, -47.1229, 26.8147, -42.1186, 40.8542, -33.1803, 47.8673, -30.2112, 62.8848, -26.2773, 70.9068, -21.3126, 77.9508, -11.3436, 88.9639, -8.39208, 96.9814, -4.42737)
 
 [node name="AntiSpawnArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AntiSpawnArea"]
 polygon = PackedVector2Array(-94, 27, -133, 60, -134, 155, -70, 197, 1, 219, 68, 202, 126, 162, 125, 58, 103, 29, 100, 10, 106, -53, 133, -116, 130, -184, 72, -222, 0, -239, -64, -223, -119, -188, -132, -113, -93, -51, -93, -33, -91, 8)
+
+[node name="QuackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_suhds")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m2tob")

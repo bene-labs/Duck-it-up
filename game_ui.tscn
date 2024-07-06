@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://djpq06ws07gy2"]
+
+[ext_resource type="Script" path="res://game_ui.gd" id="1_fdgq7"]
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_fdgq7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 21.0
+offset_top = 12.0
+offset_right = 179.0
+offset_bottom = 106.0
+
+[node name="Player1Score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+text = "Player 1: 0"
+
+[node name="Player2Score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+text = "Player 2: 0"
+
+[node name="Time" type="Label" parent="."]
+offset_left = 1385.0
+offset_top = 18.0
+offset_right = 1586.0
+offset_bottom = 63.0
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+text = "Time: 0:00.00"
