@@ -1,5 +1,5 @@
-# Duck Fight Game (Awesome pun name pending)
-
+# Duck it up!
+Fight for bread and quack for glory!
 ## Core Gameplay Mechanics
 ### Collecting Bread:
 Ducks move around a small park area to eat pieces of bread.
