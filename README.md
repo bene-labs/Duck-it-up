@@ -1,4 +1,6 @@
 # Duck it up!
+![image](https://github.com/user-attachments/assets/2359dc7d-b9d0-4d73-86be-cd090ca4fe2f)
+
 Fight for bread and quack for glory!
 ## Core Gameplay Mechanics
 ### Collecting Bread:
