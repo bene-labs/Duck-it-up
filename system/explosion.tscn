@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://nyxpod1ds8vd" path="res://Assets/Sprites/Explosion4/0023.png" id="23_6v8sv"]
 [ext_resource type="Texture2D" uid="uid://u5xmsv0fxdsh" path="res://Assets/Sprites/Explosion4/0024.png" id="24_f0uld"]
 [ext_resource type="Texture2D" uid="uid://bxwxkm4l8k47n" path="res://Assets/Sprites/Explosion4/0025.png" id="25_0777j"]
-[ext_resource type="Script" path="res://explosion.gd" id="26_uc41r"]
+[ext_resource type="Script" path="res://system/explosion.gd" id="26_uc41r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_reojx"]
 animations = [{

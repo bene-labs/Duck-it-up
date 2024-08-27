@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djpq06ws07gy2"]
 
-[ext_resource type="Script" path="res://game_ui.gd" id="1_fdgq7"]
+[ext_resource type="Script" path="res://system/game_ui.gd" id="1_fdgq7"]
 [ext_resource type="Texture2D" uid="uid://bfskub16sltby" path="res://Assets/Sprites/victory_green.png" id="2_ojmkk"]
 [ext_resource type="Texture2D" uid="uid://2rvk7kfloqx3" path="res://Assets/Sprites/victory_blue.png" id="3_a41a6"]
 

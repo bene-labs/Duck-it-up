@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqh8xvrbou82t"]
 
-[ext_resource type="Script" path="res://duck.gd" id="1_fwdbc"]
+[ext_resource type="Script" path="res://system/duck.gd" id="1_fwdbc"]
 [ext_resource type="Texture2D" uid="uid://b86eq8m7oig6d" path="res://Assets/Sprites/duck1.svg" id="2_i7nm7"]
-[ext_resource type="PackedScene" uid="uid://d2pew0ofx0o8d" path="res://explosion.tscn" id="2_vxtr2"]
+[ext_resource type="PackedScene" uid="uid://d2pew0ofx0o8d" path="res://system/explosion.tscn" id="2_vxtr2"]
 [ext_resource type="AudioStream" uid="uid://d3d36gpsjcn5g" path="res://Assets/Sound/ducks_hit_eachother.wav" id="3_m2tob"]
 [ext_resource type="AudioStream" uid="uid://dk0s30d2qudon" path="res://Assets/Sound/quack1.wav" id="4_suhds"]
 

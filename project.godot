@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Duck Fight Mini Jam"
-run/main_scene="res://game.tscn"
+run/main_scene="res://system/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -76,4 +76,4 @@ quack2={
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.146795, 0.226499, 0.577031, 1)
+environment/defaults/default_clear_color=Color(0.145098, 0.227451, 0.576471, 1)

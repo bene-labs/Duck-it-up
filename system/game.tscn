@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dn5pyu1rt1v5m"]
 
-[ext_resource type="PackedScene" uid="uid://h8f7cpxtrxmt" path="res://bread_spawner.tscn" id="1_1g3fd"]
-[ext_resource type="PackedScene" uid="uid://cqh8xvrbou82t" path="res://duck.tscn" id="1_7woym"]
+[ext_resource type="PackedScene" uid="uid://h8f7cpxtrxmt" path="res://system/bread_spawner.tscn" id="1_1g3fd"]
+[ext_resource type="PackedScene" uid="uid://cqh8xvrbou82t" path="res://system/duck.tscn" id="1_7woym"]
 [ext_resource type="PackedScene" uid="uid://bej4y0py05i48" path="res://obstacle/small_rock.tscn" id="3_c80tt"]
 [ext_resource type="PackedScene" uid="uid://chgpqiidv31aw" path="res://obstacle/big_rock.tscn" id="4_e3mc3"]
 [ext_resource type="PackedScene" uid="uid://cm6dih0w4wf6u" path="res://obstacle/middle_rock.tscn" id="5_sm3hc"]
@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://m8j1htqsm30p" path="res://Assets/Sound/eat1.wav" id="10_hx4ht"]
 [ext_resource type="PackedScene" uid="uid://dvlj00jpi3qah" path="res://obstacle/top_rock.tscn" id="10_qdhc3"]
 [ext_resource type="Texture2D" uid="uid://nskxott5x041" path="res://Assets/Sprites/duck2.svg" id="10_ycxuw"]
-[ext_resource type="PackedScene" uid="uid://djpq06ws07gy2" path="res://game_ui.tscn" id="11_gqte7"]
+[ext_resource type="PackedScene" uid="uid://djpq06ws07gy2" path="res://system/game_ui.tscn" id="11_gqte7"]
 [ext_resource type="AudioStream" uid="uid://c4x1yu4r58hum" path="res://Assets/Sound/eat2.wav" id="12_k7kp4"]
 [ext_resource type="AudioStream" uid="uid://1yhj4kuu7e0j" path="res://Assets/Sound/duckfight_music.wav" id="13_es76g"]
 

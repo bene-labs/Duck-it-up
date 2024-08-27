@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BreadData" load_steps=3 format=3 uid="uid://730dpmewsdrm"]
 
-[ext_resource type="Script" path="res://bread_data.gd" id="1_3o4e2"]
+[ext_resource type="Script" path="res://system/bread_data.gd" id="1_3o4e2"]
 [ext_resource type="Texture2D" uid="uid://br056k5yrj20y" path="res://Assets/Sprites/Bread2.png" id="2_2l7r8"]
 
 [resource]

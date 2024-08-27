@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://yre3ma06y7e0"]
 
-[ext_resource type="Script" path="res://bread.gd" id="1_g08rq"]
+[ext_resource type="Script" path="res://system/bread.gd" id="1_g08rq"]
 [ext_resource type="Texture2D" uid="uid://ctxvc1v2yp3it" path="res://Assets/Sprites/Bread3.png" id="2_x4gdw"]
 
 [node name="BaseBread" type="Node2D"]
